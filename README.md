@@ -12,3 +12,17 @@ solution: sudo apt-get install php7.4-cli php7.4-fpm php7.4-bcmath php7.4-curl p
 
 probleme: The "https://packagist.org/packages.json" file could not be downloaded: failed to open stream: No connection could be made because the target machine actively refused it.   
 solution: sudo sh -c "echo 'precedence ::ffff:0:0/96 100' >> /etc/gai.conf" //Operation timed out (IPv6 issues)
+
+## validation of formular
+probleme: regex to define the password format  
+solution: \/\\\] this part, the \ is to escape signe, it means match the following sign: /\]
+<code>
+"/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}:;<>,.?~_+-=|[\/\\\]]).{8,15}$/"
+</code>
+regele meaning: 
+  *At least one digit [0-9], 
+  *At least one lowercase character [a-z],
+  *At least one uppercase character [A-Z],
+  *At least one special character [*.!@#$%^&(){}:;<>,.?~_+-=|],
+  *At least 8 characters in length, but no more than 15.
+
