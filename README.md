@@ -15,10 +15,10 @@ solution: sudo sh -c "echo 'precedence ::ffff:0:0/96 100' >> /etc/gai.conf" //Op
 
 ## validation of formular
 probleme: regex to define the password format   
-solution: \/\\\] this part, the \ is to escape signe, it means match the following sign: /\]  
-<code>  
+solution: \/\\\] this part, the \ is to escape signe, it means match the following sign: ```/\] ``` 
+```
 "/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}:;<>,.?~_+-=|[\/\\\]]).{8,15}$/"  
-</code>  
+```
 regele meaning:   
   *At least one digit [0-9],   
   *At least one lowercase character [a-z],  
